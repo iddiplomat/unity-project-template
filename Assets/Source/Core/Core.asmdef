@@ -1,0 +1,30 @@
+{
+    "name": "Core",
+    "rootNamespace": "",
+    "references": [
+        "GUID:88e358ebcfef24c1884ef32c57b5946f",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:029c1c1b674aaae47a6841a0b89ad80e",
+        "GUID:309cd113ed2da4500ba1c89bcfc78b6b",
+        "GUID:f7eb4d95f0bd24e39a52038ac413fb32",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:dc47925d1a5fa2946bdd37746b2b5d48",
+        "GUID:c60949cabd9d04495a898a11a4872101",
+        "GUID:7c88a4a7926ee5145ad2dfa06f454c67",
+        "GUID:74bf2ce6315754d5386071c046a0d8a8",
+        "GUID:75689f51df3704f16ab53fd8e1e7d863",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:4307f53044263cf4b835bd812fc161a4",
+        "GUID:53daf8f13accd4117b8e572d56ef1b52"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
