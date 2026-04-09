@@ -36,10 +36,10 @@ namespace Source.Infrastructure.MVVM
         
         public void SetupHideAnimation()
         {
-            _showSequence = DOTween.Sequence();
-            _showSequence.AppendCallback(() => OnHideStarted?.Invoke());
-            _showSequence.Append(DOTween.To(() => canvasGroup.alpha, (x) => canvasGroup.alpha = x, 0.0f, showScreenDuration));
-            _showSequence.AppendCallback(() => OnHideCompleted?.Invoke());
+            _hideSequence = DOTween.Sequence();
+            _hideSequence.AppendCallback(() => OnHideStarted?.Invoke());
+            _hideSequence.Append(DOTween.To(() => canvasGroup.alpha, (x) => canvasGroup.alpha = x, 0.0f, showScreenDuration));
+            _hideSequence.AppendCallback(() => OnHideCompleted?.Invoke());
         }
 
         void IScreenView.Initialize(IScreenViewModel viewModel)
@@ -57,12 +57,14 @@ namespace Source.Infrastructure.MVVM
 
         public virtual async UniTask Show()
         {
-            await _showSequence.Play();
+            _showSequence.Restart();
+            await UniTask.WaitUntil(() => !_showSequence.IsActive());
         }
 
         public virtual async UniTask Hide()
         {
-            await _hideSequence.Play();
+            _hideSequence.Restart();
+            await UniTask.WaitUntil(() => !_hideSequence.IsActive());
         }
 
         public virtual void Dispose()
