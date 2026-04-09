@@ -79,11 +79,26 @@ namespace Source.Infrastructure.MVVM.Factory
                 viewModel.Dispose();
                 view.Dispose();
                 await view.Hide();
-                Object.Destroy(entry.instance);
+                DestroyScreenInstance(entry.instance);
 
                 _resourceService.ReleaseAsset(entry.address);
                 _screens.Remove(viewType);
             }
+        }
+
+        private static void DestroyScreenInstance(Object instance)
+        {
+            if (instance == null)
+                return;
+
+#if UNITY_EDITOR
+            if (!Application.isPlaying)
+            {
+                Object.DestroyImmediate(instance);
+                return;
+            }
+#endif
+            Object.Destroy(instance);
         }
     }
 }

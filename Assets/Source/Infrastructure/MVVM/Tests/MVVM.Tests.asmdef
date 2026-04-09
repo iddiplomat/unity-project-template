@@ -1,0 +1,24 @@
+{
+    "name": "MVVM.Tests",
+    "rootNamespace": "Source.Infrastructure.MVVM.Tests",
+    "references": [
+        "GUID:88e358ebcfef24c1884ef32c57b5946f",
+        "GUID:c60949cabd9d04495a898a11a4872101",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false,
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ]
+}
